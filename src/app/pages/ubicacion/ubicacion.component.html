@@ -1,0 +1,60 @@
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    .column {
+        width: 30%;
+        padding: 10px;
+        background-color: #00000000;
+        margin: 10px;
+        border-radius: 5px;
+    }
+    .column h3 {
+        text-align: left; /* Alineación del texto a la izquierda */
+        position: relative;
+        margin-bottom: 20px;
+    }
+    .column h3::after {
+        content: '';
+        display: block;
+        width: 45%; /* Ajusta el largo de la línea aquí */
+        height: 4px; /* Grosor de la línea */
+        background-color: #ed3237; /* Color de la línea */
+        margin-top: 5px;
+        margin-left: 0; /* Pega la línea al lado izquierdo */
+    }
+</style>
+
+<div class="container">
+    <div class="column">
+        <h3>A CERCA DE GRUFLOSA</h3>
+        <p>Este es el texto de la primera columna. Puedes agregar aquí cualquier información relevante.</p>
+    </div>
+    <div class="column">
+        <h3>CONTACTOS GRUFLOSA</h3>
+        <p>Este es el texto de la segunda columna. Puedes personalizar este texto según tus necesidades.</p>
+    </div>
+    <div class="column">
+        <h3>UBICACIÓN GRUFLOSA</h3>
+        <p>Este es el texto de la tercera columna. Cada columna tiene su propio título y contenido.</p>
+    </div>
+</div>
+
+
+    
+    <style>
+        .map-container {
+            text-align: center;
+            margin: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+        }
+    </style>
+
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d119667.48646609756!2d-100.10831348353338!3d20.399007141787525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x85d30cdd5952fdd9%3A0xb877504ed371e091!2sAutopista%20Mexico%20Queretaro%20KM164%20Autopista%20Mexico%20Queretaro%20KM164%2C%2076820%20Loma%20Linda%2C%20Qro.!3m2!1d20.399026499999998!2d-100.02591179999999!5e0!3m2!1ses-419!2smx!4v1728590611976!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>

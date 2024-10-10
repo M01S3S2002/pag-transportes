@@ -1,0 +1,92 @@
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; /* Evita desbordamiento */
+        box-sizing: border-box; /* Asegura que márgenes y padding se incluyan en el tamaño total */
+    }
+
+    .background {
+        background-image: 
+            linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%), 
+            url('assets/img/inicio/FONDO.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh; /* Ocupa el 100% del alto de la pantalla */
+        width: auto; /* Ocupa el 100% del ancho de la pantalla */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box; /* Asegura que márgenes y padding se incluyan en el tamaño */
+    }
+
+    .centered-image {
+        /* margin-top: -40px;  Eliminar este margen negativo */
+        width: 350px;
+        max-height: 100vh; /* Asegura que no exceda el viewport */
+        z-index: 2;
+        transition: transform 0.3s;
+    }
+
+    .below-image {
+        max-width: 800px;
+        margin-top: 18px;
+        max-height: 100vh; /* Asegura que no exceda el viewport */
+        z-index: 2;
+        transition: transform 0.3s;
+    }
+
+    /* Animación palpitante */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05); /* Aumenta el tamaño */
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .centered-image:hover,
+    .below-image:hover {
+        animation: pulse 0.5s infinite;
+    }
+
+    @media (max-width: 768px) {
+        .centered-image {
+            width: 250px;
+            max-height: 100vh;
+        }
+
+        .below-image {
+            width: 500px;
+            margin-top: 15px;
+            max-height: 100vh;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .centered-image {
+            width: 250px;
+            max-height: 100vh;
+        }
+
+        .below-image {
+            width: 300px;
+            margin-top: 10px;
+            max-height: 100vh;
+        }
+    }
+</style>
+
+
+
+    <div class="background">
+        <img src="assets\img\inicio\LOGO-GRANDE.webp" alt="Imagen Centrada" class="centered-image">
+        <img src="assets\img\inicio\PASIÓN-POR-EL-TRANSPORTE.webp" alt="Imagen Debajo" class="below-image">
+    </div>

@@ -1,0 +1,127 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    nav {
+        position: fixed; /* Mantiene el menú en la parte superior */
+        top: 0; /* Se adhiere a la parte superior */
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        padding: 10px 20px;
+        background-color: #ffffff;
+        overflow: hidden; /* Evita el desbordamiento */
+        z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    .menu {
+        display: flex; /* Asegúrate de que el menú use flexbox */
+        align-items: center; /* Centra verticalmente los elementos */
+        margin-left: auto; /* Alinea el menú a la derecha */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    }
+
+    .menu a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        margin-left: 20px;
+        font-size: 18px;
+    }
+
+    .menu a:hover {
+        color: #ddd;
+    }
+
+    .flag img {
+        height: 25px; /* Ajusta el tamaño de la bandera */
+        margin-left: 10px;
+        transform: scaleX(-1); /* Invierte la bandera horizontalmente */
+    }
+
+    /* Estilos para la línea de tres colores */
+    .color-line {
+        display: flex;
+        height: 10px;
+        margin-top: 60px; /* Espacio para no superponerse con el menú */
+    }
+
+    .color-line div {
+        flex: 1;
+    }
+
+    .color-line .green {
+        background:  #00a859;
+    }
+
+    .color-line .black {
+        background-color: black;
+    }
+
+    .color-line .red {
+        background: #ed3237;
+    }
+
+    /* Media queries para responsividad */
+    @media (max-width: 768px) {
+        .menu {
+            flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+            align-items: flex-start; /* Alinea los elementos a la izquierda */
+        }
+
+        .menu a {
+            margin-left: 0; /* Elimina el margen en pantallas pequeñas */
+            margin-top: 10px; /* Añade un margen superior para separación */
+        }
+
+        .flag {
+            margin-top: 10px; /* Añade margen superior para separación */
+        }
+    }
+
+    @media (max-width: 1024px) { /* Ajuste para pantallas de tabletas */
+        .menu {
+            flex-direction: row; /* Asegura que la dirección sea fila en tablets */
+            justify-content: center; /* Centra los elementos horizontalmente */
+        }
+
+        .menu a {
+            margin-left: 10px; /* Ajusta el margen de los enlaces */
+        }
+
+        .flag img {
+            height: 30px; /* Aumenta el tamaño de la bandera en tablets */
+        }
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="logo">
+        <img src="assets\img\navbar\LOGO-PEQUEÑO.webp" alt="Logo">
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+        <div class="menu">
+            <a class="nav-link" href="#">SERVICIOS</a>
+            <a class="nav-link" href="#">ACERCA DE NOSOTROS</a>
+            <a class="nav-link" href="#">CONTACTO</a>
+            <div class="flag">
+                <img src="assets\img\navbar\BANDERA.webp" alt="Bandera de México">
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Línea de tres colores -->
+<div class="color-line">
+    <div class="green"></div>
+    <div class="black"></div>
+    <div class="red"></div>
+</div>

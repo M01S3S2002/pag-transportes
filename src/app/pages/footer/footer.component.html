@@ -1,0 +1,53 @@
+<style>
+  @keyframes moveAndFade {
+      20% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+      80% {
+        transform: translateX(900px);
+        opacity: 0;
+      }
+      90% {
+        transform: translateX(0);
+        opacity: 0;
+      }
+    }
+    
+    .gift-animation {
+      animation: moveAndFade 7s infinite;
+    }
+  </style>
+  
+  <footer style="position: fixed; bottom: 0; left: 0; width: 100%; padding: 10px; background-color: #ffffff; z-index: 1000;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      
+      <!-- GIF con animación -->
+      <img src="assets\img\footer\CAMION.webp" alt="Gif" class="gift-animation" style="width: auto; height: 50px;">
+  
+      <!-- Contenedor de botones alineados a la derecha -->
+      <div style="display: flex;">
+        <!-- Botón 1 -->
+        <a   style="margin-right: 10px;">
+          <button style="background: none; border: none;">
+            <img src="assets\img\footer\SIGUENOS.webp" alt="Button 1" style="width: auto; height: 50px;">
+          </button>
+        </a>
+  
+        <!-- Botón 2 -->
+        <a href="https://link2.com" target="_blank" style="margin-right: 10px;">
+          <button style="background: none; border: none;">
+            <img src="assets\img\footer\FACEBOOK.webp" alt="Button 2" style="width: 50px; height: 50px;">
+          </button>
+        </a>
+  
+        <!-- Botón 3 -->
+        <a href="https://link3.com" target="_blank">
+          <button style="background: none; border: none;">
+            <img src="assets\img\footer\INSTA.webp" alt="Button 3" style="width: 50px; height: 50px;">
+          </button>
+        </a>
+      </div>
+      
+    </div>
+</footer>

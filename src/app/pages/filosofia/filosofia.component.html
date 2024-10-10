@@ -1,0 +1,87 @@
+<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
+    <img src="assets\img\FLECHA-VERDE.webp" alt="Imagen 1" style="width: 30px; height: 30px; margin-right: 10px;">
+    <h1 style="margin: 0;">NUESTRA FILOSOFÍA</h1>
+    <img src="assets\img\FLECHA-ROJA.webp" alt="Imagen 2" style="width: 30px; height: 30px; margin-left: 10px;">
+</div>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column {
+            background-color: #ffffff00;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+        }
+        .rounded-image {
+            border-radius: 10px 0 10px 0;
+            width: 100%;
+            height: auto;
+        }
+        .title {
+            margin: 20px 0;
+            font-size: 1.5em;
+            position: relative;
+        }
+        .title img {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .title img.left {
+            left: -40px;
+        }
+        .title img.right {
+            right: -40px;
+        }
+        .text {
+            margin-top: 10px;
+        }
+    </style>
+
+
+<div class="container">
+    <div class="column">
+        <img src="imagen1.jpg" alt="Imagen 1" class="rounded-image">
+        <div class="title">
+            <img src="icono1.jpg" alt="Icono Izquierda" class="left">
+            MISIÓN
+            <img src="icono2.jpg" alt="Icono Derecha" class="right">
+        </div>
+        <div class="text">Texto centrado en la columna 1.</div>
+    </div>
+
+    <div class="column">
+        <img src="imagen2.jpg" alt="Imagen 2" class="rounded-image">
+        <div class="title">
+            <img src="icono1.jpg" alt="Icono Izquierda" class="left">
+            VISIÓN
+            <img src="icono2.jpg" alt="Icono Derecha" class="right">
+        </div>
+        <div class="text">Texto centrado en la columna 2.</div>
+    </div>
+
+    <div class="column">
+        <img src="imagen3.jpg" alt="Imagen 3" class="rounded-image">
+        <div class="title">
+            <img src="icono1.jpg" alt="Icono Izquierda" class="left">
+            POLÍTICA DE CALIDAD
+            <img src="icono2.jpg" alt="Icono Derecha" class="right">
+        </div>
+        <div class="text">Texto centrado en la columna 3.</div>
+    </div>
+</div>
+

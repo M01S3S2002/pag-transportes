@@ -1,0 +1,172 @@
+<br/>
+<br/>
+<br/>
+
+<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
+    <img src="assets/img/FLECHA-VERDE.webp" alt="Imagen 1" style="width: 30px; height: 30px; margin-right: 10px;">
+    <h1 style="margin: 0;">COBERTURA</h1>
+    <img src="assets/img/FLECHA-ROJA.webp" alt="Imagen 2" style="width: 30px; height: 30px; margin-left: 10px;">
+</div>
+
+<style>
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    /* Animación de onda */
+    @keyframes waveEffect {
+        0% {
+            transform: translateX(0) skewY(0deg);
+        }
+        25% {
+            transform: translateX(-5px) skewY(-3deg);
+        }
+        50% {
+            transform: translateX(0) skewY(3deg);
+        }
+        75% {
+            transform: translateX(5px) skewY(-3deg);
+        }
+        100% {
+            transform: translateX(0) skewY(0deg);
+        }
+    }
+
+    /* Estilo para la imagen del mapa con animación */
+    .container img {
+        max-width: 500px;
+        margin-right: 50px;
+        animation: waveEffect 4s ease-in-out infinite;
+    }
+
+    .container p {
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* Contenedor de dos columnas */
+    .state-columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /* Estilos para las columnas */
+    .column {
+        flex-basis: 48%; /* Las columnas ocuparán un 48% del ancho para que quepan dos */
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    /* Imagen pequeña al lado de cada estado */
+    .state-list {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .state-list img {
+        width: 10px;
+        height: 10px;
+        margin-right: 10px;
+    }
+
+    @media (max-width: 768px) {
+        /* Mantener columnas al 48% del ancho en pantallas pequeñas */
+        .state-columns {
+            justify-content: center;
+        }
+
+        .column {
+            flex-basis: 48%; /* Mantener columnas en pantallas pequeñas */
+        }
+
+        .container img {
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            padding: 0 20px;
+        }
+    }
+</style>
+
+<div class="container">
+    <img src="assets/img/cobertura/MAPA.webp" alt="mapa">
+    <div>
+        <p>Somos una empresa con más de 30 años <br>
+            de experiencia en los servicios de transporte <br>
+            de carga. <br>
+            Nuestro centro operativo se encuentra en la <br>
+            ciudad de San Juan del Rio Queretaro. <br>
+            Nuestras rutas de servicio abarcan:</p>
+
+        <!-- Contenedor con dos columnas -->
+        <div class="state-columns">
+            <!-- Primera columna con 7 estados -->
+            <div class="column">
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    Querétaro
+                </div>
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    Coahuila
+                </div>
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    León
+                </div>
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    Irapuato
+                </div>
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    Celaya
+                </div>
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    CDMX
+                </div>
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    Guadalajara
+                </div>
+            </div>
+
+            <!-- Segunda columna con 6 estados -->
+            <div class="column">
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    Chihuahua
+                </div>
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    Cd. Juárez
+                </div>
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    Monterrey
+                </div>
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    Nuevo Laredo
+                </div>
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    Morelia
+                </div>
+                <div class="state-list">
+                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
+                    Cd. Victoria
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
