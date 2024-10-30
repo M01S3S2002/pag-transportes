@@ -9,10 +9,9 @@
 
     .background {
         background-image: 
-            linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%), 
+            linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, rgba(255, 255, 255, 1) 100%), 
             url('assets/img/inicio/FONDO.webp');
         background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
         height: 100vh; /* Ocupa el 100% del alto de la pantalla */
         width: auto; /* Ocupa el 100% del ancho de la pantalla */
@@ -20,11 +19,29 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        box-sizing: border-box; /* Asegura que márgenes y padding se incluyan en el tamaño */
+        animation: background-move 30s linear infinite; /* Animación para mover el fondo */
+    }
+
+    /* Animación para desplazar la imagen de fondo */
+    @keyframes background-move {
+        0% {
+            background-position: 0% center;
+        }
+        25% {
+            background-position: 50% center;
+        }
+        50% {
+            background-position: 100% center;
+        }
+        75% {
+            background-position: 50% center;
+        }
+        100% {
+            background-position: 0% center;
+        }
     }
 
     .centered-image {
-        /* margin-top: -40px;  Eliminar este margen negativo */
         width: 350px;
         max-height: 100vh; /* Asegura que no exceda el viewport */
         z-index: 2;
@@ -84,9 +101,7 @@
     }
 </style>
 
-
-
-    <div class="background">
-        <img src="assets\img\inicio\LOGO-GRANDE.webp" alt="Imagen Centrada" class="centered-image">
-        <img src="assets\img\inicio\PASIÓN-POR-EL-TRANSPORTE.webp" alt="Imagen Debajo" class="below-image">
-    </div>
+<div class="background">
+    <img src="assets/img/inicio/LOGO-GRANDE.webp" alt="Imagen Centrada" class="centered-image">
+    <img src="assets/img/inicio/PASION-POR-EL-TRANSPORTE.webp" alt="Imagen Debajo" class="below-image">
+</div>

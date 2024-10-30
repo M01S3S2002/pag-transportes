@@ -1,0 +1,116 @@
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0 20px;
+        font-family: Arial, sans-serif;
+    }
+
+    .content {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .text {
+        flex: 1;
+        padding-left: 20%;
+        padding-right: 25%;
+        text-align: justify;
+    }
+
+    .images {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images .top-image {
+        margin-bottom: 10px;
+    }
+
+    .images .bottom-images {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+
+    /* Media query para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .content {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            padding-left: 4%;
+            padding-right: 4%; /* Cambiado para mantener consistencia en los márgenes */
+            width: 100%;
+            text-align: center; /* Cambiado a center */
+        }
+
+        .text p {
+            text-align: center; /* Asegura que el texto en el párrafo también esté centrado */
+            padding-right: 0; /* Elimina el padding derecho del párrafo */
+        }
+
+        .images .bottom-images {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .images .bottom-images img {
+            margin-bottom: 10px;
+            max-width: 100px;
+        }
+
+        .images {
+            margin-bottom: 20px;
+        }
+    }
+</style>
+
+<div class="content">
+    <div class="text">
+        <p>
+            Además de contar con el personal altamente calificado
+            nuestras unidades cuentas con sistema GPS, para la mayor 
+            seguridad de su mercancía.<br><br>
+            
+            Nuestro sistema de GPS abarca:<br>
+        </p>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets\img\cobertura\FLECHA BB.webp"  style="width: 20px; height: 20px; margin-right: 10px;"> Bloqueo de puertas<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets\img\cobertura\FLECHA BB.webp"  style="width: 20px; height: 20px; margin-right: 10px;">Alarma de exceso de velocidad<br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets\img\cobertura\FLECHA BB.webp"  style="width: 20px; height: 20px; margin-right: 10px;">Botón de pánico<br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets\img\cobertura\FLECHA BB.webp"  style="width: 20px; height: 20px; margin-right: 10px;">Bloqueo de chapa<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets\img\cobertura\FLECHA BB.webp"  style="width: 20px; height: 20px; margin-right: 10px;">Disminución de velocidad progresiva<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets\img\cobertura\FLECHA BB.webp"  style="width: 20px; height: 20px; margin-right: 10px;">Bloqueo de motor<br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets\img\cobertura\FLECHA BB.webp"  style="width: 20px; height: 20px; margin-right: 10px;">Jamming detection<br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets\img\cobertura\FLECHA BB.webp"  style="width: 20px; height: 20px; margin-right: 10px;">Desconexión & conexión de baterías <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets\img\cobertura\FLECHA BB.webp"  style="width: 20px; height: 20px; margin-right: 10px;">Alerta de paradas
+        </p>
+    </div>
+    <div class="images">
+        <div class="top-image">
+            <img src="assets\img\servicios\trailer.webp" alt="Imagen 1">
+        </div>
+        <div class="bottom-images">
+            <img src="assets\img\servicios\SKY ANGEL.webp" alt="Imagen 2" style="height: 90px; width: auto; margin-left: 120px;">
+            <img src="assets\img\servicios\EASYTRACK.webp" alt="Imagen 3 "style="height: 40px; width: auto;">
+        </div>
+    </div>
+</div>

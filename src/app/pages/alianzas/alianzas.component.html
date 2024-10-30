@@ -1,32 +1,68 @@
-
-
-<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
+<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px; margin-bottom: 50px;">
     <img src="assets\img\FLECHA-VERDE.webp" alt="Imagen 1" style="width: 30px; height: 30px; margin-right: 10px;">
-    <h1 style="margin: 0;">ALIANZAS COMERCIALES</h1>
+    <h2 style="margin: 0; text-align: center;">ALIANZAS COMERCIALES</h2>
     <img src="assets\img\FLECHA-ROJA.webp" alt="Imagen 2" style="width: 30px; height: 30px; margin-left: 10px;">
 </div>
 
- 
-
-
+<div class="container">
+    <img src="assets/img/alianzas/LOGOS.webp" alt="Imagen centrada">
+</div>
 
 <style>
     body, html {
         height: 100%;
         margin: 0;
     }
+
+    .title-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px; /* Reducir el margen para acercar el título a la imagen */
+    }
+
+    .arrow {
+        width: 30px;
+        height: 30px;
+        margin: 0 10px; /* Mantener un pequeño margen horizontal entre la flecha y el texto */
+    }
+
+    .title {
+        margin: 0;
+        font-size: 24px;
+    }
+
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: auto; /* Ajustar la altura */
+        margin-bottom: 50px; /* Ajustar el margen inferior */
     }
+
     img {
         max-width: 100%;
         height: auto;
     }
-</style>
 
-<div class="container">
-    <img src="assets\img\alianzas\LOGOS.webp" alt="Imagen centrada">
-</div>
+    /* Estilos para pantallas pequeñas */
+    @media (max-width: 600px) {
+        .arrow {
+            width: 20px;
+            height: 20px;
+        }
+
+        .title {
+            font-size: 18px;
+        }
+
+        .container img {
+            width: 80%; /* Ajustar el tamaño de la imagen en pantallas pequeñas */
+        }
+
+        .title-container {
+            margin-bottom: 10px; /* Reducir aún más el margen entre el título y la imagen en pantallas pequeñas */
+        }
+    }
+</style>

@@ -1,87 +1,139 @@
-<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
-    <img src="assets\img\FLECHA-VERDE.webp" alt="Imagen 1" style="width: 30px; height: 30px; margin-right: 10px;">
-    <h1 style="margin: 0;">NUESTRA FILOSOFÍA</h1>
-    <img src="assets\img\FLECHA-ROJA.webp" alt="Imagen 2" style="width: 30px; height: 30px; margin-left: 10px;">
+<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px; margin-bottom: 50px;">
+    <img src="assets/img/FLECHA-VERDE.webp" alt="Imagen 1" style="width: 30px; height: 30px; margin-right: 10px;">
+    <h2 style="margin: 0;">NUESTRA FILOSOFÍA</h2>
+    <img src="assets/img/FLECHA-ROJA.webp" alt="Imagen 2" style="width: 30px; height: 30px; margin-left: 10px;">
 </div>
 
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        .container {
-            display: flex;
-            justify-content: space-between;
-        }
-        .column {
-            background-color: #ffffff00;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
-            padding: 20px;
-            width: 30%;
-            text-align: center;
-        }
-        .rounded-image {
-            border-radius: 10px 0 10px 0;
-            width: 100%;
-            height: auto;
-        }
+    .container {
+        display: flex;
+        flex-wrap: wrap; /* Permite que las columnas se ajusten a la siguiente línea */
+        justify-content: space-between;
+    }
+
+    .column {
+        background-color: #ffffff00;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0);
+        padding: 20px;
+        flex: 1 1 300px; /* Crece y se contrae, mínimo 300px */
+        margin: 10px; /* Margen entre columnas */
+        text-align: center;
+        min-width: 300px; /* Ancho mínimo para mantener proporciones */
+    }
+
+    .rounded-image {
+        border-radius: 10px;
+        width: 100%; /* Asegura que la imagen se ajuste al ancho del contenedor */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    .title {
+        margin: 20px 0;
+        font-size: 1.5em;
+        position: relative;
+        display: flex; /* Usar flex para alinear mejor los elementos */
+        align-items: center; /* Alinear verticalmente */
+        justify-content: center; /* Centrar contenido */
+    }
+
+    .title img {
+        width: 30px; /* Asegura que las flechas tengan un tamaño consistente */
+        height: auto; /* Mantiene proporción de las flechas */
+    }
+
+    .title img.left {
+        margin-right: 10px; /* Espacio entre la flecha izquierda y el texto */
+    }
+
+    .title img.right {
+        margin-left: 10px; /* Espacio entre el texto y la flecha derecha */
+    }
+
+    .text {
+        margin-top: 10px;
+        font-size: 1em; /* Asegura que el texto se mantenga proporcional */
+    }
+
+    /* Media queries para pantallas más pequeñas */
+    @media (max-width: 768px) {
         .title {
-            margin: 20px 0;
-            font-size: 1.5em;
-            position: relative;
+            font-size: 1.2em; /* Ajusta el tamaño del texto */
         }
-        .title img {
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .title img.left {
-            left: -40px;
-        }
-        .title img.right {
-            right: -40px;
-        }
-        .text {
-            margin-top: 10px;
-        }
-    </style>
 
+        .title img {
+            width: 25px; /* Ajusta el tamaño de las flechas */
+        }
+
+        .text {
+            font-size: 0.9em; /* Ajusta el tamaño del texto para pantallas pequeñas */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .column {
+            flex: 1 1 100%; /* Las columnas ocupan todo el ancho */
+            margin: 5px 0; /* Margen vertical */
+        }
+        
+        .title {
+            font-size: 1.1em; /* Ajuste adicional para pantallas muy pequeñas */
+        }
+
+        .title img {
+            width: 20px; /* Ajusta el tamaño de las flechas */
+        }
+    }
+</style>
 
 <div class="container">
     <div class="column">
         <img src="imagen1.jpg" alt="Imagen 1" class="rounded-image">
         <div class="title">
-            <img src="icono1.jpg" alt="Icono Izquierda" class="left">
+            <img src="assets/img/filosofia/verd1.webp" alt="Icono Izquierda" class="left">
             MISIÓN
-            <img src="icono2.jpg" alt="Icono Derecha" class="right">
+            <img src="assets/img/filosofia/verd2.webp" alt="Icono Derecha" class="right">
         </div>
-        <div class="text">Texto centrado en la columna 1.</div>
+        <div class="text">Transportar la carga con eficiencia y<br>
+            eficacia llegando con seguridad a<br>
+            nuestros clientes brindando un<br>
+            servicio con personal capacitado.<br>
+        </div>
     </div>
 
     <div class="column">
         <img src="imagen2.jpg" alt="Imagen 2" class="rounded-image">
         <div class="title">
-            <img src="icono1.jpg" alt="Icono Izquierda" class="left">
+            <img src="assets/img/filosofia/verd1.webp" alt="Icono Izquierda" class="left">
             VISIÓN
-            <img src="icono2.jpg" alt="Icono Derecha" class="right">
+            <img src="assets/img/filosofia/verd2.webp" alt="Icono Derecha" class="right">
         </div>
-        <div class="text">Texto centrado en la columna 2.</div>
+        <div class="text">Ser una empresa de transporte federal<br>
+            de carga general reconocida por su<br>
+            excelencia humana y profesional,<br>
+            comprometidos con la seguridad y el<br>
+            medio ambiente.<br>
+        </div>
     </div>
 
     <div class="column">
         <img src="imagen3.jpg" alt="Imagen 3" class="rounded-image">
         <div class="title">
-            <img src="icono1.jpg" alt="Icono Izquierda" class="left">
+            <img src="assets/img/filosofia/verd1.webp" alt="Icono Izquierda" class="left">
             POLÍTICA DE CALIDAD
-            <img src="icono2.jpg" alt="Icono Derecha" class="right">
+            <img src="assets/img/filosofia/verd2.webp" alt="Icono Derecha" class="right">
         </div>
-        <div class="text">Texto centrado en la columna 3.</div>
+        <div class="text">Posicionarnos en el gremio del<br>
+            transporte con una imagen positiva y<br>
+            reconocimiento al término del año <br>
+            2025.
+        </div>
     </div>
 </div>
-

@@ -2,42 +2,73 @@
     .container {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap; /* Permite que las columnas hagan salto de línea cuando sea necesario */
     }
     .column {
-        width: 30%;
+        width: 30%; /* Puedes ajustar el ancho para determinar cuántas columnas caben en una línea */
         padding: 10px;
         background-color: #00000000;
-        margin: 10px;
+        margin: 10px; /* Este margen puedes cambiarlo según necesites más o menos espacio entre columnas */
         border-radius: 5px;
+        text-align: justify;
     }
     .column h3 {
-        text-align: left; /* Alineación del texto a la izquierda */
+        text-align: left;
         position: relative;
         margin-bottom: 20px;
     }
     .column h3::after {
         content: '';
         display: block;
-        width: 45%; /* Ajusta el largo de la línea aquí */
-        height: 4px; /* Grosor de la línea */
-        background-color: #ed3237; /* Color de la línea */
+        width: 45%;
+        height: 4px;
+        background-color: #ed3237;
         margin-top: 5px;
-        margin-left: 0; /* Pega la línea al lado izquierdo */
+        margin-left: 0;
+    }
+    .icon {
+        margin-right: 0px;
+        width: 16px;
+        vertical-align: middle;
+    }
+
+    /* Media query para ajustar columnas en pantallas más pequeñas */
+    @media (max-width: 768px) {
+        .column {
+            width: 100%; /* En pantallas pequeñas, cada columna ocupará todo el ancho */
+            margin-bottom: 20px; /* Añade margen inferior entre columnas cuando hacen salto de línea */
+        }
     }
 </style>
 
 <div class="container">
-    <div class="column">
-        <h3>A CERCA DE GRUFLOSA</h3>
-        <p>Este es el texto de la primera columna. Puedes agregar aquí cualquier información relevante.</p>
+    <div class="column" style="padding-right: 88px;">
+        <h3>ACERCA DE GRUFLOSA</h3>
+        <p>Gruflosa ofrece servicios de transporte 
+            de carga con la más alta calidad, 
+            puntualidad y tecnología que nos ha
+            mantenido en el mercado por más de 
+            30 años.
+        </p>
     </div>
-    <div class="column">
+    <div class="column" style="padding: 0%;">
         <h3>CONTACTOS GRUFLOSA</h3>
-        <p>Este es el texto de la segunda columna. Puedes personalizar este texto según tus necesidades.</p>
+        <p>SUB GERENCIA<br>
+            <img src="assets/img/ubicacion/TEL.webp" class="icon" alt="Teléfono"> 427  108 05 43
+            <img src="assets\img\ubicacion\CORREO.webp" class="icon" alt="Correo"> administracion&#64;gruflosa.com<br>
+            RECURSOS HUMANOS <br>
+            <img src="assets/img/ubicacion/TEL.webp" class="icon" alt="Teléfono"> 427 124 20 09
+            <img src="assets\img\ubicacion\CORREO.webp" class="icon" alt="Correo"> contralor&#64;gruflosa.com<br>  
+            FACTURACIÓN<br>
+            <img src="assets/img/ubicacion/TEL.webp" class="icon" alt="Teléfono"> 812  536  51 51
+            <img src="assets\img\ubicacion\CORREO.webp" class="icon" alt="Correo"> facturacion&#64;gruflosa.com<br>
+        </p>
     </div>
     <div class="column">
         <h3>UBICACIÓN GRUFLOSA</h3>
-        <p>Este es el texto de la tercera columna. Cada columna tiene su propio título y contenido.</p>
+        <p><img src="assets\img\ubicacion\UBI.webp" class="icon" alt="Ubicación"> Autopista Querétaro - México Km. 164 S/N
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Colonia Loma Linda, San Juan del Río, Qro.
+        </p>
     </div>
 </div>
 

@@ -1,47 +1,40 @@
-<br/>
-<br/>
-<br/>
-
-<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
-    <img src="assets/img/FLECHA-VERDE.webp" alt="Imagen 1" style="width: 30px; height: 30px; margin-right: 10px;">
-    <h1 style="margin: 0;">COBERTURA</h1>
-    <img src="assets/img/FLECHA-ROJA.webp" alt="Imagen 2" style="width: 30px; height: 30px; margin-left: 10px;">
+<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px; margin-bottom: 50px;">
+    <img src="assets\img\FLECHA-VERDE.webp" alt="Imagen 1" style="width: 30px; height: 30px; margin-right: 10px;">
+    <h2 style="margin: 0;">COBERTURA</h2>
+    <img src="assets\img\FLECHA-ROJA.webp" alt="Imagen 2" style="width: 30px; height: 30px; margin-left: 10px;">
 </div>
 
 <style>
     .container {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        flex-direction: row; /* Mantener el texto y mapa en fila en pantallas grandes */
+        align-items: flex-start; /* Alineación de los elementos al inicio */
+        justify-content: center; /* Alineación central */
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    .map {
+        max-width: 500px; /* Controla el tamaño del mapa */
+        margin-right: 50px; /* Espaciado entre el mapa y el texto */
     }
 
     /* Animación de onda */
     @keyframes waveEffect {
-        0% {
-            transform: translateX(0) skewY(0deg);
-        }
-        25% {
-            transform: translateX(-5px) skewY(-3deg);
-        }
-        50% {
-            transform: translateX(0) skewY(3deg);
-        }
-        75% {
-            transform: translateX(5px) skewY(-3deg);
-        }
-        100% {
-            transform: translateX(0) skewY(0deg);
-        }
+        0% { transform: translateX(0) skewY(0deg); }
+        25% { transform: translateX(-5px) skewY(-3deg); }
+        50% { transform: translateX(0) skewY(3deg); }
+        75% { transform: translateX(5px) skewY(-3deg); }
+        100% { transform: translateX(0) skewY(0deg); }
     }
 
     /* Estilo para la imagen del mapa con animación */
-    .container img {
-        max-width: 500px;
-        margin-right: 50px;
-        animation: waveEffect 4s ease-in-out infinite;
-    }
+  
 
+/* Aplica la animación solo al mapa */
+.map {
+    animation: waveEffect 4s ease-in-out infinite;
+}
     .container p {
         margin: 0;
         line-height: 1.5;
@@ -75,96 +68,93 @@
     }
 
     @media (max-width: 768px) {
-        /* Mantener columnas al 48% del ancho en pantallas pequeñas */
-        .state-columns {
-            justify-content: center;
-        }
-
-        .column {
-            flex-basis: 48%; /* Mantener columnas en pantallas pequeñas */
-        }
-
-        .container img {
-            max-width: 100%;
-            margin-right: 0;
-            margin-bottom: 20px;
-        }
-
-        .container p {
-            padding: 0 20px;
-        }
+    .container {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos en la columna */
     }
+
+    .map {
+        margin-right: 0; /* Quita el margen derecho del mapa */
+        margin-bottom: 20px; /* Añade espacio entre el mapa y el texto */
+        width: 100%; /* Ajusta el ancho del mapa */
+    }
+
+    .state-columns {
+        display: flex; /* Mantiene la disposición en dos columnas */
+        flex-wrap: wrap; /* Permite que las columnas se ajusten */
+        justify-content: space-between; /* Espaciado entre columnas */
+        width: 100%; /* Asegúrate de que ocupa todo el ancho */
+    }
+
+    .column {
+        flex-basis: 48%; /* Mantener el ancho de las columnas en un 48% */
+        margin-bottom: 20px; /* Añade espacio entre las columnas en pantallas pequeñas */
+        box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+        padding: 0 10px; /* Espaciado interno para evitar que el texto se pegue a los bordes */
+    }
+
+    .container p {
+        width: 100%; /* Asegura que el párrafo ocupe todo el ancho */
+        text-align: center; /* Alinea el texto al centro */
+        padding: 0 20px; /* Añade un poco de padding horizontal */
+    }
+}
+
+
+
 </style>
 
 <div class="container">
-    <img src="assets/img/cobertura/MAPA.webp" alt="mapa">
+    <img class="map" src="assets/img/cobertura/MAPA.webp" alt="mapa">
     <div>
-        <p>Somos una empresa con más de 30 años <br>
-            de experiencia en los servicios de transporte <br>
-            de carga. <br>
-            Nuestro centro operativo se encuentra en la <br>
-            ciudad de San Juan del Rio Queretaro. <br>
-            Nuestras rutas de servicio abarcan:</p>
+        <p style="margin-right: 58%; ">Somos una empresa con más de 30 años de experiencia en los servicios de transporte de carga.<br><br> Nuestro centro operativo se encuentra en la ciudad de San Juan del Río, Querétaro. Nuestras rutas de servicio abarcan:</p>
 
         <!-- Contenedor con dos columnas -->
         <div class="state-columns">
             <!-- Primera columna con 7 estados -->
             <div class="column">
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    Querétaro
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> Querétaro
                 </div>
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    Coahuila
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> León
                 </div>
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    León
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> Irapuato
                 </div>
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    Irapuato
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> Celaya
                 </div>
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    Celaya
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> CDMX
                 </div>
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    CDMX
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> Guadalajara
                 </div>
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    Guadalajara
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> Chihuahua
                 </div>
             </div>
 
             <!-- Segunda columna con 6 estados -->
             <div class="column">
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    Chihuahua
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> Coahuila
                 </div>
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    Cd. Juárez
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> Cd. Juárez
                 </div>
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    Monterrey
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> Monterrey
                 </div>
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    Nuevo Laredo
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> Nuevo Laredo
                 </div>
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    Morelia
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> Morelia
                 </div>
                 <div class="state-list">
-                    <img src="assets\img\cobertura\FLECHA BB.webp" alt="icono">
-                    Cd. Victoria
+                    <img src="assets/img/cobertura/FLECHA BB.webp" alt="icono"> Cd. Victoria
                 </div>
             </div>
         </div>

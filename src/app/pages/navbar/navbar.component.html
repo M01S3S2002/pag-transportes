@@ -46,9 +46,13 @@
 
     /* Estilos para la línea de tres colores */
     .color-line {
+        position: fixed; /* Hace que la línea sea fija */
+        top: 60px; /* Ajusta esto según la altura de tu navbar */
+        left: 0; /* Se alinea a la izquierda */
+        width: 100%; /* Asegura que ocupe todo el ancho */
         display: flex;
         height: 10px;
-        margin-top: 60px; /* Espacio para no superponerse con el menú */
+        z-index: 999; /* Asegura que esté por debajo del menú de navegación */
     }
 
     .color-line div {
@@ -56,7 +60,7 @@
     }
 
     .color-line .green {
-        background:  #00a859;
+        background: #00a859;
     }
 
     .color-line .black {
@@ -100,18 +104,21 @@
     }
 </style>
 
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="logo">
-        <img src="assets\img\navbar\LOGO-PEQUEÑO.webp" alt="Logo">
+        <a href="">
+            <img src="assets/img/navbar/LOGO-PEQUENO.webp" alt="Logo" style="cursor: pointer;">
+        </a>
     </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="menu">
         <div class="menu">
-            <a class="nav-link" href="#">SERVICIOS</a>
-            <a class="nav-link" href="#">ACERCA DE NOSOTROS</a>
-            <a class="nav-link" href="#">CONTACTO</a>
+            <a class="nav-link" href="#servicios">SERVICIOS</a>
+            <a class="nav-link" href="#nosotros">ACERCA DE NOSOTROS</a>
+            <a class="nav-link" href="#contacto">CONTACTO</a>
             <div class="flag">
                 <img src="assets\img\navbar\BANDERA.webp" alt="Bandera de México">
             </div>

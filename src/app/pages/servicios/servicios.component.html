@@ -1,40 +1,131 @@
-<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px;">
+<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px; margin-bottom: 50px;">
     <img src="assets\img\FLECHA-VERDE.webp" alt="Imagen 1" style="width: 30px; height: 30px; margin-right: 10px;">
-    <h1 style="margin: 0;">NUESTROS SERVICIOS</h1>
+    <h2 style="margin: 0; text-align: center;">NUESTROS SERVICIOS</h2>
     <img src="assets\img\FLECHA-ROJA.webp" alt="Imagen 2" style="width: 30px; height: 30px; margin-left: 10px;">
 </div>
 
+<style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 
+    .images {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 
-    <style>
+    /* Proporciones y márgenes exactos para imágenes grandes y pequeñas */
+    .image-1 {
+        width: auto;
+        height: 172px;
+        margin-right: -20px;
+        margin-top: 21.5%;
+    }
+
+    .image-2 {
+        width: auto;
+        height: 300px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .image-3 {
+        width: auto;
+        height: 172px;
+        margin-left: -20px;
+        margin-top: 11%;
+    }
+
+    .text {
+        width: 50%;
+        padding-left: 20px;
+        padding-right: 109px;
+        text-align: justify;
+    }
+
+    /* Animación de rotación */
+    .rotar {
+        animation: rotar 6s  infinite;
+    }
+
+    @keyframes rotar {
+        from {
+            transform: rotateY(20deg);
+        }
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+
+    @media (max-width: 768px) {
+        /* Asegurando que las imágenes mantengan proporciones y tamaños exactos */
+        .image-1 {
+            height: 118px;
+            margin-right: -20px;
+            margin-top: 20%;
+        }
+
+        .image-2 {
+            height: 200px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        .image-3 {
+            height: 118px;
+            margin-left: -20px;
+            margin-top: 11%;
+        }
+    }
+
+    @media (max-width: 768px) {
         .container {
-            display: flex;
-            justify-content: space-between;
+            flex-direction: column; /* Coloca los elementos uno debajo del otro */
+            align-items: center; /* Centra los elementos */
+            text-align: center; /* Centra el texto */
         }
+
         .images {
-            display: flex;
-            gap: 10px;
+            justify-content: center; /* Centra las imágenes */
         }
-        .images img {
-            width: 100px;
-            height: auto;
-        }
+
         .text {
-            width: 50%;
-            padding-left: 20px;
+            width: 100%; /* Asegura que el texto ocupe todo el ancho disponible */
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center; /* Centra el texto en pantallas pequeñas */
         }
-    </style>
-  
+    }
+</style>
 
-    <div class="container">
-        <div class="images">
-            <img src="assets\img\servicios\F1.webp" alt="Imagen 1">
-            <img src="assets\img\servicios\F2.webp" alt="Imagen 2">
-            <img src="assets\img\servicios\F3.webp" alt="Imagen 3">
-        </div>
-        <div class="text">
-            <h2>Título del Texto</h2>
-            <p>Aquí puedes agregar el texto que desees. Este es un ejemplo de cómo se verá el contenido al lado de las imágenes.</p>
-        </div>
+<div class="container">
+    <div class="images">
+        <img src="assets/img/servicios/F1.webp" alt="Imagen 1" class="image-1 rotar">
+        <img src="assets/img/servicios/F2.webp" alt="Imagen 2" class="image-2 rotar">
+        <img src="assets/img/servicios/F3.webp" alt="Imagen 3" class="image-3 rotar">
     </div>
-
+    <div class="text">
+        <p>Nos especializamos en ofrecer servicios integrales de transporte de carga,
+            diseñados para satisfacer las necesidades logísticas de empresas de
+            todos los tamaños y sectores.<br><br>
+            Garantizamos un transporte eficiente, seguro y puntual, asegurando que tus
+            productos lleguen a su destino en las mejores condiciones.
+            <br><br>
+            Nuestro servicio abarca:
+        </p>
+        <ul style="list-style: none; padding-left: 0;">
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/cobertura/FLECHA BB.webp" alt="Icono" style="width: 20px; height: 20px; margin-right: 10px;"> Transporte consolidado</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/cobertura/FLECHA BB.webp" alt="Icono" style="width: 20px; height: 20px; margin-right: 10px;"> Carga completa</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/cobertura/FLECHA BB.webp" alt="Icono" style="width: 20px; height: 20px; margin-right: 10px;"> Viajes locales</li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/cobertura/FLECHA BB.webp" alt="Icono" style="width: 20px; height: 20px; margin-right: 10px;"> Servicios dedicados</li>
+        </ul>
+        <p>Nuestro equipo de expertos logísticos trabaja de la mano con cada cliente
+            para optimizar rutas, reducir costos y asegurar que todas las regulaciones
+            y normativas sean cumplidas.
+        </p>
+    </div>
+</div>

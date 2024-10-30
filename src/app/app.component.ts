@@ -10,14 +10,15 @@ import { ServiciosComponent } from "./pages/servicios/servicios.component";
 import { FilosofiaComponent } from "./pages/filosofia/filosofia.component";
 import { UbicacionComponent } from "./pages/ubicacion/ubicacion.component";
 import { ContactoComponent } from "./pages/contacto/contacto.component";
+import { Servicios2Component } from "./pages/servicios2/servicios2.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavbarComponent, CarruselComponent, InicioComponent, CoberturaComponent, FooterComponent, AlianzasComponent, ServiciosComponent, FilosofiaComponent, UbicacionComponent, ContactoComponent],
+  imports: [RouterOutlet, NavbarComponent, CarruselComponent, InicioComponent, CoberturaComponent, FooterComponent, AlianzasComponent, ServiciosComponent, FilosofiaComponent, UbicacionComponent, ContactoComponent, Servicios2Component],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'paginaGruflosa';
+  title = 'Gruflosa- Grupo Flores SA';
 }

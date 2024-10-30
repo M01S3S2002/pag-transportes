@@ -1,79 +1,122 @@
-<div style="display: flex; align-items: center; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
-    <img src="assets\img\FLECHA-VERDE.webp" alt="Imagen 1" style="width: 30px; height: 30px; margin-right: 10px;">
-    <h1 style="margin: 0;">CONTACTO</h1>
-    <img src="assets\img\FLECHA-ROJA.webp" alt="Imagen 2" style="width: 30px; height: 30px; margin-left: 10px;">
-</div>
-
-
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         height: 100vh;
-        margin: 0; /* Sin margen en el body */
         font-family: Arial, sans-serif;
     }
+
     .container {
         display: flex;
-        width: 100%; /* 100% del ancho de la ventana */
-        height: 70%;
-        margin: 0; /* Sin margen en el contenedor */
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
-    .form-column {
-        background-color: #ed3237; /* Color de fondo rojo */
+
+    .form-container {
+        width: 60%;
+        background-color: red;
+        padding: 20px;
+        border-radius: 0px;
+    }
+
+    h2 {
+        text-align: center;
         color: white;
-        flex: 1; /* Ocupa el mismo espacio que la columna de imagen */
+        
+    }
+
+    form {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        padding: 20px; /* Espaciado interno */
     }
-    .form-column h1 {
-        margin-bottom: 20px;
-    }
-    .form-column input, .form-column textarea {
+
+    input, textarea {
         width: 80%;
         padding: 10px;
         margin: 10px 0;
         border: none;
         border-radius: 5px;
+        background-color: white;
     }
-    .form-column input::placeholder {
-        color: lightgray;
+
+    textarea {
+        height: 100px;
+        resize: none;
     }
-    .form-column button {
+
+    button {
+        padding: 3px 20px;
         background-color: black;
         color: white;
-        padding: 10px 20px;
         border: none;
-        border-radius: 20px;
+        border-radius: 10px;
         cursor: pointer;
     }
-    .image-column {
-        flex: 1; /* Ocupa el mismo espacio que la columna del formulario */
+
+    .text-below {
+        margin-top: 10px;
+        color: white;
+        text-align: center;
+    }
+
+    .image-container {
+        width: 20%;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%; /* Asegúrate de que tenga el mismo alto que la columna del formulario */
     }
-    .image-column img {
-        max-width: 50%;
-        height: auto; /* Mantener la proporción de la imagen */
+
+    img {
+        max-width: 150%;
+        height: auto;
+    }
+
+    /* Media query para pantallas pequeñas */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-container {
+            width: 100%;
+        }
+
+        .image-container {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            max-width: 50%;
+            height: auto;
+        }
     }
 </style>
+
 <div class="container">
-    <div class="form-column">
-        <h1>¡Solicita una cotización!</h1>
-        <input type="text" placeholder="Nombre">
-        <input type="tel" placeholder="Teléfono">
-        <input type="email" placeholder="Correo">
-        <textarea placeholder="Mensaje" rows="4"></textarea>
-        <button type="submit">Enviar</button>
-        <p>Gracias por contactarnos.</p>
+    <div class="form-container">
+        <h2>¡Solicita una cotización!</h2>
+        <form>
+            <input type="text" placeholder="*NOMBRE" required>
+            <input type="number" placeholder="*TELÉFONO" required>
+            <input type="email" placeholder="*CORREO" required>
+            <textarea placeholder="*MENSAJE" required></textarea>
+            <button type="submit">ENVIAR</button>
+            <p class="text-below"><i class="fas fa-phone" style="margin-right: 5px;"></i> 
+                332 741 66 23 &nbsp;&nbsp;&nbsp; logistica&#64;gruflosa.com</p>
+        </form>
     </div>
-    <div class="image-column">
-        <img src="assets\img\contacto\perro-completo.webp" alt="Descripción de la imagen">
+    <div class="image-container">
+        <img src="assets/img/contacto/perro-completo.webp" alt="Imagen">
     </div>
 </div>
