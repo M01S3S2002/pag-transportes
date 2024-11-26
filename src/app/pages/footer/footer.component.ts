@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-footer',
@@ -8,5 +10,10 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
+  constructor(private meta: Meta) {}
+
+  ngOnInit() {
+ 
+  }
 
 }

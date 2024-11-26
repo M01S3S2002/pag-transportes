@@ -102,17 +102,27 @@
         }
     }
 </style>
+<br/>
+<br/>
+
+<br/>
+
+<br/>
+
 
 <div class="container">
     <div class="form-container">
         <h2>¡Solicita una cotización!</h2>
-        <form>
-            <input type="text" placeholder="*NOMBRE" required>
-            <input type="number" placeholder="*TELÉFONO" required>
-            <input type="email" placeholder="*CORREO" required>
-            <textarea placeholder="*MENSAJE" required></textarea>
+        <form action="https://formsubmit.co/luismoisesmolinarocha@gmail.com" method="POST">
+            <input type="text" placeholder="*NOMBRE" name="Nombre" required>
+            <input type="number" placeholder="*TELÉFONO" name="Teléfono" required>
+            <input type="email" placeholder="*CORREO" name="Email" required>
+            <textarea placeholder="*MENSAJE" name="Mnesaje" required></textarea>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://gruflosa.com.mx/">
+
             <button type="submit">ENVIAR</button>
-            <p class="text-below"><i class="fas fa-phone" style="margin-right: 5px;"></i> 
+            <p class="text-below" style="font-family: 'Ghaitsa', sans-serif;"><i class="fas fa-phone" style="margin-right: 5px; "></i> 
                 332 741 66 23 &nbsp;&nbsp;&nbsp; logistica&#64;gruflosa.com</p>
         </form>
     </div>

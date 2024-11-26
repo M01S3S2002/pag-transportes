@@ -1,33 +1,19 @@
+<!-- lo que renderiza el nav bar fijo -->
 <app-navbar></app-navbar>
-<app-inicio></app-inicio>
-<br/>
-<br/>
-<br/>
-<app-carrusel></app-carrusel>
-<br/>
-<br/>
-<br/>
-<app-cobertura></app-cobertura>
-<br/>
-<br/>
-<br/> 
-<app-alianzas></app-alianzas>
-<br id="nosotros"/>
-<br/>
-<br/>
-<app-ubicacion></app-ubicacion>
-<br id="servicios"/>
-<br/>
-<br/>
-<app-servicios></app-servicios>
-<br>
-<app-servicios2></app-servicios2>
-<br/>
-<br/>
-<br/>
-<app-filosofia></app-filosofia>
-<br id="contacto"/>
-<br/>
-<br/>
-<app-contacto></app-contacto>
+
+<!-- Lo que renderiza toda la pantalla inicial -->
+<router-outlet name="inicio"></router-outlet>
+<router-outlet name="carrusel"></router-outlet>
+<router-outlet name="cobertura"></router-outlet>
+<router-outlet name="alianzas"></router-outlet>
+<router-outlet name="ubicacion"></router-outlet>
+
+<!-- lo que renderiza nuestros servicios -->
+<router-outlet name="servicios"></router-outlet>
+<router-outlet name="servicios2"></router-outlet>
+
+<!-- lo que renderiza acerca de nosostros y contacto -->
+<router-outlet></router-outlet>
+
+<!-- lo que redneriza el footer fiho -->
 <app-footer></app-footer>

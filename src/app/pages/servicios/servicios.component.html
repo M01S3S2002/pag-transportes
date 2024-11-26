@@ -18,12 +18,14 @@
         justify-content: flex-start;
     }
 
-    /* Proporciones y márgenes exactos para imágenes grandes y pequeñas */
+    /* Animación con retraso para que las imágenes suban y bajen en el orden indicado */
     .image-1 {
         width: auto;
-        height: 172px;
+        height: 225px;
         margin-right: -20px;
-        margin-top: 21.5%;
+        margin-top: 7.4%;
+        animation: subirBajar 5s ease-in-out infinite;
+        animation-delay: 1s; /* Primera imagen sube y baja sin retraso */
     }
 
     .image-2 {
@@ -31,13 +33,17 @@
         height: 300px;
         margin-left: 0px;
         margin-right: 0px;
+        animation: subirBajar 5s ease-in-out infinite;
+        animation-delay: 1.5s; /* Segunda imagen tiene medio segundo de retraso */
     }
 
     .image-3 {
         width: auto;
-        height: 172px;
+        height: 195px;
         margin-left: -20px;
         margin-top: 11%;
+        animation: subirBajar 5s ease-in-out infinite;
+        animation-delay: 2s; /* Tercera imagen tiene un segundo de retraso */
     }
 
     .text {
@@ -47,38 +53,41 @@
         text-align: justify;
     }
 
-    /* Animación de rotación */
-    .rotar {
-        animation: rotar 6s  infinite;
-    }
-
-    @keyframes rotar {
-        from {
-            transform: rotateY(20deg);
+    /* Animación para subir y bajar las imágenes */
+    @keyframes subirBajar {
+        
+        0% {
+            transform: translateY(0);
         }
-        to {
-            transform: rotateY(360deg);
+        50% {
+            transform: translateY(-20px); /* Subir */
+            
+        }
+        100% {
+            transform: translateY(0); /* Bajar */
         }
     }
 
     @media (max-width: 768px) {
         /* Asegurando que las imágenes mantengan proporciones y tamaños exactos */
         .image-1 {
-            height: 118px;
+            height: 150px;
             margin-right: -20px;
-            margin-top: 20%;
+            margin-top: 7.5%;
         }
 
         .image-2 {
             height: 200px;
             margin-left: 0px;
             margin-right: 0px;
+            margin-bottom: 10%;
         }
 
         .image-3 {
-            height: 118px;
+            height: 130px;
             margin-left: -20px;
             margin-top: 11%;
+            
         }
     }
 
@@ -104,28 +113,18 @@
 
 <div class="container">
     <div class="images">
-        <img src="assets/img/servicios/F1.webp" alt="Imagen 1" class="image-1 rotar">
-        <img src="assets/img/servicios/F2.webp" alt="Imagen 2" class="image-2 rotar">
-        <img src="assets/img/servicios/F3.webp" alt="Imagen 3" class="image-3 rotar">
+        <img src="assets/img/servicios/F1.webp" alt="Imagen 1" class="image-1">
+        <img src="assets/img/servicios/F2.webp" alt="Imagen 2" class="image-2">
+        <img src="assets/img/servicios/F3.webp" alt="Imagen 3" class="image-3">
     </div>
     <div class="text">
-        <p>Nos especializamos en ofrecer servicios integrales de transporte de carga,
-            diseñados para satisfacer las necesidades logísticas de empresas de
-            todos los tamaños y sectores.<br><br>
-            Garantizamos un transporte eficiente, seguro y puntual, asegurando que tus
-            productos lleguen a su destino en las mejores condiciones.
-            <br><br>
-            Nuestro servicio abarca:
-        </p>
+        <p>Nos especializamos en ofrecer servicios integrales de transporte de carga, diseñados para satisfacer las necesidades logísticas de empresas de todos los tamaños y sectores.<br><br> Garantizamos un transporte eficiente, seguro y puntual, asegurando que tus productos lleguen a su destino en las mejores condiciones. <br><br> Nuestro servicio abarca:</p>
         <ul style="list-style: none; padding-left: 0;">
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/cobertura/FLECHA BB.webp" alt="Icono" style="width: 20px; height: 20px; margin-right: 10px;"> Transporte consolidado</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/cobertura/FLECHA BB.webp" alt="Icono" style="width: 20px; height: 20px; margin-right: 10px;"> Carga completa</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/cobertura/FLECHA BB.webp" alt="Icono" style="width: 20px; height: 20px; margin-right: 10px;"> Viajes locales</li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="assets/img/cobertura/FLECHA BB.webp" alt="Icono" style="width: 20px; height: 20px; margin-right: 10px;"> Servicios dedicados</li>
         </ul>
-        <p>Nuestro equipo de expertos logísticos trabaja de la mano con cada cliente
-            para optimizar rutas, reducir costos y asegurar que todas las regulaciones
-            y normativas sean cumplidas.
-        </p>
+        <p>Nuestro equipo de expertos logísticos trabaja de la mano con cada cliente para optimizar rutas, reducir costos y asegurar que todas las regulaciones y normativas sean cumplidas.</p>
     </div>
 </div>
